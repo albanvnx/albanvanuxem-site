@@ -21,6 +21,19 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:1rem;line-height:1.7;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 
+/* DESKTOP — donne plus de présence sur grand écran */
+@media (min-width:1000px){
+  :root{--max:840px}
+  html{font-size:17.5px}
+  nav{padding-top:2.6rem}
+  .section{padding:3.8rem 0}
+  p.sub{max-width:640px}
+  .email-form{max-width:480px}
+}
+@media (min-width:1400px){
+  html{font-size:18.5px}
+}
+
 /* NAV */
 nav{max-width:var(--max);margin:0 auto;padding:2rem 1.5rem 0;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{display:flex;align-items:center;gap:.75rem}
@@ -81,7 +94,7 @@ strong.lit{color:var(--text);font-weight:500}
 .wyl li strong{color:var(--text);font-weight:500}
 
 /* PRICING */
-.pg{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:4px;overflow:hidden}
+.pg{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border-radius:4px;overflow:hidden}
 .po{background:var(--bg-card);padding:1.2rem 1.5rem}
 .po.btc{background:#100e0a}
 .pl{font-size:.67rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem;display:flex;align-items:center;gap:.4rem}
@@ -90,7 +103,7 @@ strong.lit{color:var(--text);font-weight:500}
 .btc .pa{color:var(--btc)}
 .ps2{font-size:.72rem;color:var(--muted);margin-top:.3rem;line-height:1.5}
 .psav{font-size:.72rem;color:var(--btc);font-weight:500}
-.pcta{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1.2rem}
+.pcta{display:grid;grid-template-columns:1fr;gap:.75rem;margin-top:1.2rem}
 .bf{background:var(--copper);color:#0F0E0C;border:none;font-family:var(--sans);font-size:.82rem;font-weight:600;padding:.8rem 1rem;cursor:pointer;border-radius:4px;transition:opacity .2s}
 .bf:hover{opacity:.85}
 .bbtc{background:var(--btc);color:#000;border:none;font-family:var(--sans);font-size:.82rem;font-weight:600;padding:.8rem 1rem;cursor:pointer;border-radius:4px;transition:opacity .2s;display:flex;align-items:center;justify-content:center;gap:.4rem}

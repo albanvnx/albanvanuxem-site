@@ -70,7 +70,9 @@ strong.lit{color:var(--text);font-weight:500}
 
 /* ARTICLE LIST */
 .al{list-style:none}
-.ai{padding:1.2rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:90px 1fr;gap:0 1.2rem;cursor:pointer;transition:opacity .2s}
+.ai{padding:1.2rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:84px 1fr;gap:0 1rem;align-items:center;cursor:pointer;transition:opacity .2s}
+.athumb{width:84px;height:84px;object-fit:cover;border-radius:4px;background:var(--dim);display:block}
+.ai .ac{display:block;margin-bottom:.2rem;padding-top:0}
 .ai:last-child{border-bottom:none}
 .ai:hover{opacity:.7}
 .ac{font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--copper);padding-top:.3rem}
@@ -223,20 +225,7 @@ strong.lit{color:var(--text);font-weight:500}
 
   <section class="section">
     <span class="lbl">Derniers articles</span>
-    <ul class="al">
-      <li class="ai" onclick="window.open('https://medium.com/@albanvanuxem/lartisan-face-au-dogme-h%C3%A9r%C3%A9sie-sur-une-copie-d-examen-088b6bea629b','_blank')">
-        <span class="ac">Formation</span>
-        <div><div class="at">L'Artisan face au dogme : Hérésie sur une copie d'examen</div><div class="am">31 mars 2026 · 7 min</div></div>
-      </li>
-      <li class="ai" onclick="window.open('https://medium.com/@albanvanuxem/reconversion-le-co%C3%BBt-cach%C3%A9-de-lapprentissage-et-comment-j-ai-automatis%C3%A9-mes-r%C3%A9visions-du-cap-mit-55722e0adb60','_blank')">
-        <span class="ac">Méthode</span>
-        <div><div class="at">Le coût caché de l'apprentissage — automatiser ses révisions du CAP MIT</div><div class="am">11 mars 2026 · 4 min</div></div>
-      </li>
-      <li class="ai">
-        <span class="ac">Logement</span>
-        <div><div class="at">Le complexe du col blanc — la claque intellectuelle en devenant plombier</div><div class="am">À venir</div></div>
-      </li>
-    </ul>
+    <ul class="al" id="medium-list"><li style="list-style:none;padding:1rem 0;color:var(--muted);font-size:.8rem">Chargement des derniers articles…</li></ul>
     <br>
     <a href="https://medium.com/@albanvanuxem" target="_blank" class="tl2">Tous les articles →</a>
   </section>
@@ -253,11 +242,11 @@ strong.lit{color:var(--text);font-weight:500}
   </section>
 
   <section class="section" style="text-align:center;padding:4rem 0">
-    <h2 class="h2s" style="font-size:clamp(1.7rem,5vw,2.4rem);margin-bottom:.5rem">Un article,<br>toutes les <em>semaines</em>.</h2>
-    <p class="sub" style="margin-bottom:1.5rem">BTP, logement, formation — depuis l'intérieur.</p>
+    <h2 class="h2s" style="font-size:clamp(1.7rem,5vw,2.4rem);margin-bottom:.5rem">Reçois le <em>Manifeste</em>.</h2>
+    <p class="sub" style="margin-bottom:1.5rem">Le PDF gratuit tout de suite, puis mes analyses de terrain — BTP, logement, reconversion.</p>
     <form class="email-form" style="margin:0 auto 1rem" onsubmit="return false">
       <input type="email" placeholder="votre@email.com" class="email-input">
-      <button class="email-btn">Rejoindre</button>
+      <button class="email-btn">Recevoir le Manifeste</button>
     </form>
     <p class="fnote">Sans spam. Désabonnement en un clic.</p>
   </section>
@@ -619,5 +608,33 @@ if (window.location.search.includes('reservation=ok')) {
   }, 300);
 }
 </script>
+<script>
+(function(){
+  var box=document.getElementById('medium-list');
+  if(!box)return;
+  var FEED='https://medium.com/feed/@albanvanuxem';
+  var months=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+  fetch('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(FEED))
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(!d||d.status!=='ok'||!d.items||!d.items.length){throw new Error('no feed');}
+      box.innerHTML=d.items.slice(0,4).map(function(it){
+        var img=it.thumbnail||'';
+        if(!img&&it.content){var m=it.content.match(/<img[^>]+src="([^"]+)"/);if(m){img=m[1];}}
+        var cat=(it.categories&&it.categories[0])?it.categories[0]:'Article';
+        var dt=new Date((it.pubDate||'').replace(' ','T'));
+        var date=isNaN(dt.getTime())?'':dt.getDate()+' '+months[dt.getMonth()]+' '+dt.getFullYear();
+        var words=(it.content||'').replace(/<[^>]+>/g,' ').split(/\s+/).filter(Boolean).length;
+        var min=Math.max(1,Math.round(words/200));
+        var thumb=img?'<img class="athumb" src="'+img+'" alt="" loading="lazy">':'<div class="athumb"></div>';
+        var link=(it.link||'').replace(/'/g,"%27");
+        return '<li class="ai" onclick="window.open(\''+link+'\',\'_blank\')">'+thumb+'<div><span class="ac">'+cat+'</span><div class="at">'+it.title+'</div><div class="am">'+date+' · '+min+' min</div></div></li>';
+      }).join('');
+    })
+    .catch(function(){
+      box.innerHTML='<li class="ai" onclick="window.open(\'https://medium.com/@albanvanuxem\',\'_blank\')"><div><div class="at">Voir mes articles sur Medium →</div><div class="am">medium.com/@albanvanuxem</div></div></li>';
+    });
+})();
+</script>
 </body>
-</html>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

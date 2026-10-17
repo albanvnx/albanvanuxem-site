@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payer en Lightning | Alban Vanuxem</title>
+  <meta name="description" content="Payer en Bitcoin Lightning : scannez le QR code ou copiez l'adresse.">
+  <link rel="canonical" href="https://albanvanuxem.com/paiement/">
+  <meta name="robots" content="noindex, follow">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0F0E0C;--bg-card:#161513;--border:#242220;--copper:#b87333;--btc:#F7931A;--text:#E8E4DC;--muted:#6e6960;--serif:"DM Serif Display",Georgia,serif;--sans:"Inter",system-ui,sans-serif}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.7;min-height:100vh}
+    a{color:var(--copper);text-decoration:none}
+    .wrap{max-width:520px;margin:0 auto;padding:56px 16px 48px;text-align:center}
+    .kicker{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--btc);margin-bottom:1rem}
+    h1{font-family:var(--serif);font-weight:400;font-size:2.2rem;line-height:1.15;margin-bottom:1rem}
+    h1 em{font-style:italic;color:var(--copper)}
+    p{color:var(--muted);font-size:.95rem;margin-bottom:1rem}
+    .card{background:#fff;border-radius:12px;padding:20px;display:inline-block;margin:24px 0}
+    #qr{width:260px;height:260px}
+    #qr img, #qr canvas{display:block;width:260px;height:260px}
+    .addr{background:var(--bg-card);border:1px solid var(--border);border-radius:4px;padding:.8rem 1rem;font-family:ui-monospace,Menlo,monospace;font-size:.88rem;word-break:break-all;color:var(--text);margin-bottom:1rem}
+    .note{font-size:.8rem;margin-top:1.5rem}
+    footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--border);font-size:.78rem;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="kicker">Paiement Bitcoin · Lightning</p>
+    <h1>Payer en <em>Lightning</em></h1>
+    <p>Scannez le QR code avec votre portefeuille Lightning (Wallet of Satoshi, Phoenix, Blink…), ou copiez l'adresse ci-dessous.</p>
+    <div class="card"><div id="qr"></div></div>
+    <div class="addr">uneasytenor324@walletofsatoshi.com</div>
+    <p class="note">Montant et référence à indiquer dans votre portefeuille. Pour une réservation de session, écrivez-moi le créneau choisi.</p>
+    <footer><a href="https://albanvanuxem.com/">← albanvanuxem.com</a></footer>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    new QRCode(document.getElementById('qr'), { text: 'lightning:uneasytenor324@walletofsatoshi.com', width: 260, height: 260, correctLevel: QRCode.CorrectLevel.M });
+  </script>
+</body>
+</html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payer en Lightning | Alban Vanuxem</title>
+  <meta name="description" content="Payer en Bitcoin Lightning : scannez le QR code ou copiez l'adresse.">
+  <link rel="canonical" href="https://albanvanuxem.com/paiement/">
+  <meta name="robots" content="noindex, follow">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0F0E0C;--bg-card:#161513;--border:#242220;--copper:#b87333;--btc:#F7931A;--text:#E8E4DC;--muted:#6e6960;--serif:"DM Serif Display",Georgia,serif;--sans:"Inter",system-ui,sans-serif}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.7;min-height:100vh}
+    a{color:var(--copper);text-decoration:none}
+    .wrap{max-width:520px;margin:0 auto;padding:56px 16px 48px;text-align:center}
+    .kicker{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--btc);margin-bottom:1rem}
+    h1{font-family:var(--serif);font-weight:400;font-size:2.2rem;line-height:1.15;margin-bottom:1rem}
+    h1 em{font-style:italic;color:var(--copper)}
+    p{color:var(--muted);font-size:.95rem;margin-bottom:1rem}
+    .card{background:#fff;border-radius:12px;padding:20px;display:inline-block;margin:24px 0}
+    #qr{width:260px;height:260px}
+    #qr img, #qr canvas{display:block;width:260px;height:260px}
+    .addr{background:var(--bg-card);border:1px solid var(--border);border-radius:4px;padding:.8rem 1rem;font-family:ui-monospace,Menlo,monospace;font-size:.88rem;word-break:break-all;color:var(--text);margin-bottom:1rem}
+    .note{font-size:.8rem;margin-top:1.5rem}
+    footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--border);font-size:.78rem;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="kicker">Paiement Bitcoin · Lightning</p>
+    <h1>Payer en <em>Lightning</em></h1>
+    <p>Scannez le QR code avec votre portefeuille Lightning (Wallet of Satoshi, Phoenix, Blink…), ou copiez l'adresse ci-dessous.</p>
+    <div class="card"><div id="qr"></div></div>
+    <div class="addr">uneasytenor324@walletofsatoshi.com</div>
+    <p class="note">Montant et référence à indiquer dans votre portefeuille. Pour une réservation de session, écrivez-moi le créneau choisi.</p>
+    <footer><a href="https://albanvanuxem.com/">← albanvanuxem.com</a></footer>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    var addr = "uneasytenor324" + "@" + "walletofsatoshi.com";
+    new QRCode(document.getElementById("qr"), { text: "lightning:" + addr, width: 260, height: 260, correctLevel: QRCode.CorrectLevel.M });
+  </script>
+</body>
+</html>

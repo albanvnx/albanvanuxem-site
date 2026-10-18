@@ -181,7 +181,7 @@ strong.lit{color:var(--text);font-weight:500}
   <span>Pages :</span>
   <a onclick="show('home')">Accueil</a>
   <a onclick="show('about')">Parcours</a>
-  <a href="/podcast/">Podcast</a>
+  <a onclick="show('podcast')">Podcast</a>
   <a onclick="show('session')">Session</a>
   <a onclick="show('app')">App CAP</a>
   <a onclick="show('manifeste')">Manifeste</a>
@@ -194,7 +194,7 @@ strong.lit{color:var(--text);font-weight:500}
   </a>
   <div class="nav-links">
     <a onclick="show('about')">Parcours</a>
-    <a href="/podcast/">Podcast</a>
+    <a onclick="show('podcast')">Podcast</a>
     <a onclick="show('session')">Réserver une session</a>
     <a onclick="show('app')">App CAP</a>
     <a onclick="show('manifeste')">Manifeste</a>
@@ -226,10 +226,24 @@ strong.lit{color:var(--text);font-weight:500}
   <section class="section">
     <span class="lbl">Nouveau · Podcast Audio Hebdomadaire</span>
     <div class="box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.8rem;flex-wrap:wrap;gap:0.5rem">
+        <span style="font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper)">Épisode 01 · 18 Octobre 2026</span>
+        <span style="font-size:0.82rem;color:var(--muted)">Durée : 12:08</span>
+      </div>
       <h3>Reconversion &amp; <em>Réel</em></h3>
-      <p class="sub" style="font-size:.85rem;color:var(--copper);font-weight:500;margin:-.4rem 0 .6rem">Épisode 1 · Pourquoi j'ai quitté les bureaux</p>
-      <p class="sub" style="margin-bottom:1rem">Les 5 lois du retour au réel : du management international en Afrique à l'apprentissage de la plomberie à 42 ans. 12 minutes sans filtre.</p>
-      <a href="/podcast/" class="tl2">Écouter l'épisode 1 (12:08) →</a>
+      <p class="sub" style="font-size:.88rem;color:var(--copper);font-weight:500;margin:-.3rem 0 .6rem">Pourquoi j'ai quitté les bureaux : les 5 lois du retour au réel</p>
+      <p class="sub" style="margin-bottom:1.2rem">Du management international en Afrique à l'apprentissage de la plomberie à 42 ans. 12 minutes sans filtre sur le choc entre abstraction tertiaire et honnêteté de la matière.</p>
+      
+      <!-- Lecteur audio direct sur la page d'accueil -->
+      <audio controls preload="metadata" style="width:100%;height:44px;margin-bottom:1rem">
+        <source src="/audio/episode-01-pourquoi-j-ai-quitte-les-bureaux.mp3" type="audio/mpeg">
+        Votre navigateur ne prend pas en charge la lecture audio directe.
+      </audio>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.8rem;padding-top:0.8rem;border-top:1px solid var(--border)">
+        <a onclick="show('podcast')" class="tl2" style="cursor:pointer">Voir les 5 lois &amp; le flux RSS →</a>
+        <a href="/audio/episode-01-pourquoi-j-ai-quitte-les-bureaux.mp3" download style="font-size:0.82rem;color:var(--muted);text-decoration:underline">Télécharger MP3 (11.1 Mo)</a>
+      </div>
     </div>
   </section>
 
@@ -267,6 +281,81 @@ strong.lit{color:var(--text);font-weight:500}
     <a onclick="show('app')">App CAP</a>
     <a onclick="show('manifeste')">Manifeste</a>
     <a href="https://medium.com/@albanvanuxem" target="_blank">Medium</a>
+  </div>
+</div>
+</div>
+
+<!-- ══ PODCAST ═════════════════════ -->
+<div id="page-podcast" class="ps">
+<div class="page">
+
+  <section class="section" style="padding-top:4.5rem">
+    <span class="lbl">Podcast Audio Hebdomadaire · Épisode 1</span>
+    <h1 class="ht" style="font-size:clamp(2.2rem,6vw,3.2rem)">Reconversion<br>&amp; <em>Réel</em></h1>
+    <p class="sub" style="font-size:1.05rem;color:var(--text);margin-bottom:.5rem">Le podcast anti-bullshit sur la sortie du tertiaire et l'apprentissage de la plomberie.</p>
+    <p class="sub" style="margin-bottom:1.5rem">Pas de romantisme d'artisan d'opérette : le constat brutal d'un ancien directeur général en Afrique qui reprend tout à zéro à 42 ans.</p>
+    
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center">
+      <a href="/podcast.xml" target="_blank" class="email-btn" style="display:inline-flex;align-items:center;gap:8px;border-radius:4px;text-decoration:none;padding:.6rem 1.1rem;font-size:.85rem">
+        <span>🎧 Flux RSS du podcast</span>
+      </a>
+      <span style="font-size:.8rem;color:var(--muted)">Compatible Spotify, Apple Podcasts, Pocket Casts</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="box" style="padding:2rem">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:0.5rem">
+        <span style="font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper)">Épisode 01 · 18 Octobre 2026</span>
+        <span style="font-size:0.82rem;color:var(--muted)">Durée : 12:08</span>
+      </div>
+
+      <h2 style="font-family:var(--serif);font-size:1.6rem;font-weight:400;margin-bottom:.8rem;line-height:1.25">
+        Pourquoi j'ai quitté les bureaux :<br><em>les 5 lois du retour au réel</em>
+      </h2>
+
+      <p class="sub" style="margin-bottom:1.5rem">
+        Après 15 ans de direction générale et de management international en Afrique, Alban Vanuxem pose sa démission et entre en apprentissage plomberie. Dans cet épisode fondateur enregistré sans filtre, il décortique les 5 piliers économiques et philosophiques de sa bascule.
+      </p>
+
+      <!-- Lecteur audio HTML5 -->
+      <audio controls preload="metadata" style="width:100%;height:44px;margin-bottom:1.2rem">
+        <source src="/audio/episode-01-pourquoi-j-ai-quitte-les-bureaux.mp3" type="audio/mpeg">
+        Votre navigateur ne prend pas en charge la lecture audio directe.
+      </audio>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem">
+        <a href="/audio/episode-01-pourquoi-j-ai-quitte-les-bureaux.mp3" download style="font-size:.82rem;color:var(--copper);text-decoration:underline">
+          Télécharger le fichier MP3 (11.1 Mo)
+        </a>
+        <span style="font-size:.78rem;color:var(--muted)">Mastering Broadcast -16 LUFS · Élimination des bafouillages</span>
+      </div>
+
+      <span class="lbl" style="margin-top:1.5rem">Les 5 lois développées dans l'épisode</span>
+      <ul class="wyl" style="margin-top:1rem;margin-bottom:1.5rem">
+        <li><strong>1. La rareté crée la valeur :</strong> Regarder où tout le monde court et aller dans l'autre sens. À l'heure où l'IA sature l'abstraction et les écrans, la capacité à transformer la matière physique devient le seul actif rare.</li>
+        <li><strong>2. La carte n'est pas le territoire :</strong> Pourquoi aucun grand modèle linguistique ne viendra ramper dans un vide sanitaire pour réparer votre collecteur de chauffage central.</li>
+        <li><strong>3. L'argent est dans l'exécution, pas dans le dessin :</strong> Le monde est rempli de concepteurs, de consultants et de planificateurs. La valeur réelle captée appartient à celui qui soude, raccorde et met sous pression.</li>
+        <li><strong>4. Penser avec ses mains et la finitude :</strong> La leçon de Matthew Crawford. La beauté d'une boucle hydraulique fermée et brasée qui fonctionne, face aux réunions tertiaires sans début ni fin.</li>
+        <li><strong>5. La matière ne flatte personne :</strong> Le miroir de la salle de bain à 6h du matin face aux miroirs de fête foraine des comités de direction. À 3 bars de pression d'eau, le statut social ne sert à rien : ça tient ou ça fuit.</li>
+      </ul>
+
+      <div style="border-left:2px solid var(--copper);padding:.4rem 0 .4rem 1.1rem;margin:1.5rem 0;font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--text);line-height:1.5">
+        « Un réseau hydraulique sous pression est binaire : ça tient ou ça fuit. Il n'y a pas de place pour le blabla ou la politique. Le cuivre et l'eau ne mentent jamais. »
+        <small style="display:block;font-family:var(--sans);font-style:normal;font-size:.78rem;color:var(--muted);margin-top:.4rem">— Alban Vanuxem, Épisode 1</small>
+      </div>
+    </div>
+  </section>
+
+</div>
+<div class="fw">
+  <span class="fc">© 2026 Alban Vanuxem</span>
+  <div class="fl">
+    <a onclick="show('home')">Accueil</a>
+    <a onclick="show('about')">Parcours</a>
+    <a onclick="show('podcast')">Podcast</a>
+    <a onclick="show('session')">Session</a>
+    <a onclick="show('manifeste')">Manifeste</a>
   </div>
 </div>
 </div>

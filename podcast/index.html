@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reconversion &amp; Réel | Le Podcast d'Alban Vanuxem</title>
+  <meta name="description" content="Le podcast anti-bullshit sur la sortie du tertiaire et l'apprentissage de la plomberie. Par Alban Vanuxem, ancien cadre dirigeant en reconversion.">
+  <link rel="canonical" href="https://albanvanuxem.com/podcast/">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Alban Vanuxem">
+  <meta property="og:title" content="Reconversion &amp; Réel — Le Podcast d'Alban Vanuxem">
+  <meta property="og:description" content="Du management international au chantier : le choc entre abstraction tertiaire et honnêteté de la matière. Écoutez l'Épisode 1.">
+  <meta property="og:url" content="https://albanvanuxem.com/podcast/">
+  <meta property="og:locale" content="fr_FR">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0F0E0C;--bg-card:#161513;--border:#242220;
+      --copper:#b87333;--copper-hover:#d08a4c;
+      --text:#E8E4DC;--muted:#6e6960;
+      --serif:"DM Serif Display",Georgia,serif;
+      --sans:"Inter",system-ui,sans-serif;
+    }
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:1rem;line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:680px;margin:0 auto;padding:56px 20px 64px}
+    .topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px}
+    .topbar a{font-size:.85rem;color:var(--muted);transition:color .2s}
+    .topbar a:hover{color:var(--text)}
+    .nav-brand{display:flex;align-items:center;gap:.75rem}
+    .nav-name{font-weight:600;color:var(--text);font-size:.9rem}
+    .kicker{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--copper);margin-bottom:1.2rem}
+    h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,7vw,3.4rem);line-height:1.08;margin-bottom:1.2rem}
+    h1 em{font-style:italic;color:var(--copper)}
+    .sub{font-size:.98rem;color:var(--muted);line-height:1.72;margin-bottom:2rem}
+    
+    .rss-banner{background:rgba(184,115,51,0.08);border:1px solid rgba(184,115,51,0.25);border-radius:6px;padding:1rem 1.2rem;margin-bottom:2.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+    .rss-info{font-size:.85rem;color:var(--text)}
+    .rss-info strong{color:var(--copper)}
+    .rss-btn{display:inline-flex;align-items:center;gap:6px;background:var(--copper);color:#0F0E0C;font-size:.82rem;font-weight:600;padding:.5rem .9rem;border-radius:4px;transition:opacity .2s}
+    .rss-btn:hover{opacity:.9}
+
+    .ep-card{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:2rem;margin-bottom:2rem}
+    .ep-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem}
+    .ep-badge{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--copper)}
+    .ep-dur{font-size:.82rem;color:var(--muted)}
+    .ep-title{font-family:var(--serif);font-size:1.6rem;font-weight:400;line-height:1.25;margin-bottom:.8rem}
+    .ep-title em{font-style:italic;color:var(--copper)}
+    .ep-desc{font-size:.92rem;color:var(--muted);line-height:1.65;margin-bottom:1.5rem}
+    
+    audio{width:100%;height:44px;border-radius:4px;outline:none;margin-bottom:1.5rem}
+    
+    .ep-points{list-style:none;display:flex;flex-direction:column;gap:.75rem;margin:1.5rem 0;padding-top:1.2rem;border-top:1px solid var(--border)}
+    .ep-points li{font-size:.88rem;color:var(--muted);padding-left:1.1rem;position:relative;line-height:1.55}
+    .ep-points li::before{content:"—";position:absolute;left:0;color:var(--copper)}
+    .ep-points li strong{color:var(--text);font-weight:500}
+
+    .quote{border-left:2px solid var(--copper);padding:.4rem 0 .4rem 1.1rem;margin:2rem 0;font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--text);line-height:1.5}
+    .quote small{display:block;font-family:var(--sans);font-style:normal;font-size:.78rem;color:var(--muted);margin-top:.5rem}
+    
+    footer{margin-top:52px;padding-top:20px;border-top:1px solid var(--border);font-size:.78rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem}
+    footer a:hover{color:var(--text)}
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="nav-brand">
+      <a href="/" class="nav-name">← Alban Vanuxem</a>
+    </div>
+    <div style="display:flex;gap:1.2rem">
+      <a href="/manifeste/">Le Manifeste</a>
+      <a href="/podcast.xml" target="_blank" style="color:var(--copper)">Flux RSS</a>
+    </div>
+  </div>
+
+  <span class="kicker">Podcast Hebdomadaire · Épisode 1</span>
+  <h1>Reconversion<br>&amp; <em>Réel</em>.</h1>
+  <p class="sub">
+    Le podcast anti-bullshit sur la sortie du tertiaire et l'apprentissage de la plomberie. Pas de romantisme d'artisan d'opérette : le constat brutal d'un ancien directeur général en Afrique qui reprend tout à zéro à 42 ans.
+  </p>
+
+  <div class="rss-banner">
+    <div class="rss-info">
+      <span>🎧 <strong>Flux RSS officiel</strong> (Spotify, Apple Podcasts, etc.) :</span>
+    </div>
+    <a href="/podcast.xml" class="rss-btn" target="_blank">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+      Ouvrir / Copier podcast.xml
+    </a>
+  </div>
+
+  <!-- ÉPISODE 1 -->
+  <article class="ep-card">
+    <div class="ep-meta">
+      <span class="ep-badge">Épisode 01 · 18 Octobre 2026</span>
+      <span class="ep-dur">Durée : 12:08</span>
+    </div>
+
+    <h2 class="ep-title">Pourquoi j'ai quitté les bureaux :<br><em>les 5 lois du retour au réel</em></h2>
+    
+    <p class="ep-desc">
+      Après 15 ans de direction générale et de management international en Afrique, Alban Vanuxem pose sa démission et entre en apprentissage plomberie. Dans cet épisode fondateur enregistré sans filtre, il décortique les 5 piliers économiques et philosophiques de sa bascule.
+    </p>
+
+    <!-- Lecteur audio natif -->
+    <audio controls preload="metadata">
+      <source src="/audio/episode-01-pourquoi-j-ai-quitte-les-bureaux.mp3" type="audio/mpeg">
+      Votre navigateur ne prend pas en charge la lecture audio directe.
+    </audio>
+
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:1.5rem">
+      <a href="/audio/episode-01-pourquoi-j-ai-quitte-les-bureaux.mp3" download style="font-size:.82rem; color:var(--copper); text-decoration:underline">
+        Télécharger le fichier MP3 (11.1 Mo)
+      </a>
+      <span style="font-size:.78rem; color:var(--muted)">Mastering Broadcast -16 LUFS</span>
+    </div>
+
+    <ul class="ep-points">
+      <li><strong>1. La rareté crée la valeur :</strong> Regarder où tout le monde court et aller dans l'autre sens. À l'heure où l'IA sature l'abstraction et les écrans, la capacité à transformer la matière physique devient le seul actif rare.</li>
+      <li><strong>2. La carte n'est pas le territoire :</strong> Pourquoi aucun grand modèle linguistique ne viendra ramper dans un vide sanitaire pour réparer votre collecteur de chauffage central.</li>
+      <li><strong>3. L'argent est dans l'exécution, pas dans le dessin :</strong> Le monde est rempli de concepteurs, de consultants et de planificateurs. La valeur réelle captée appartient à celui qui soude, raccorde et met sous pression.</li>
+      <li><strong>4. Penser avec ses mains et la finitude :</strong> La leçon de Matthew Crawford. La beauté d'une boucle hydraulique fermée et brasée qui fonctionne, face aux réunions tertiaires sans début ni fin.</li>
+      <li><strong>5. La matière ne flatte personne :</strong> Le miroir de la salle de bain à 6h du matin face aux miroirs de fête foraine des comités de direction. À 3 bars de pression d'eau, le statut social ne sert à rien : ça tient ou ça fuit.</li>
+    </ul>
+
+    <div class="quote">
+      « Un réseau hydraulique sous pression est binaire : ça tient ou ça fuit. Il n'y a pas de place pour le blabla ou la politique. Le cuivre et l'eau ne mentent jamais. »
+      <small>— Alban Vanuxem, Épisode 1</small>
+    </div>
+  </article>
+
+  <footer>
+    <span>&copy; 2026 Alban Vanuxem</span>
+    <div style="display:flex;gap:1.2rem">
+      <a href="/">Accueil</a>
+      <a href="/manifeste/">Le Manifeste</a>
+      <a href="/podcast.xml">Flux RSS</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>

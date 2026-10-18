@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" 
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Reconversion &amp; Réel — Alban Vanuxem</title>
+    <link>https://albanvanuxem.com</link>
+    <language>fr</language>
+    <copyright>© 2026 Alban Vanuxem</copyright>
+    <description>Le podcast de déconstruction de la bureaucratie tertiaire et du retour au travail manuel. Par Alban Vanuxem, ancien dirigeant international en Afrique devenu apprenti plombier-chauffagiste aux Compagnons du Devoir.</description>
+    <itunes:subtitle>De l'Afrique aux chantiers : le podcast anti-bullshit sur la reconversion manuelle</itunes:subtitle>
+    <itunes:author>Alban Vanuxem</itunes:author>
+    <itunes:summary>Le podcast de déconstruction de la bureaucratie tertiaire et du retour au travail manuel. Par Alban Vanuxem, ancien dirigeant international en Afrique devenu apprenti plombier-chauffagiste aux Compagnons du Devoir.</itunes:summary>
+    <itunes:owner>
+      <itunes:name>Alban Vanuxem</itunes:name>
+      <itunes:email>contact@albanvanuxem.com</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://albanvanuxem.com/assets/img/alban.jpg" />
+    <itunes:category text="Business">
+      <itunes:category text="Careers" />
+    </itunes:category>
+    <itunes:category text="Education" />
+    <itunes:explicit>no</itunes:explicit>
+
+    <item>
+      <title>Pourquoi j'ai quitté les bureaux : les 5 lois du retour au réel</title>
+      <itunes:title>Pourquoi j'ai quitté les bureaux : les 5 lois du retour au réel</itunes:title>
+      <itunes:episode>1</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:author>Alban Vanuxem</itunes:author>
+      <itunes:subtitle>De l'Afrique aux chantiers : le choc entre abstraction tertiaire et honnêteté de la matière</itunes:subtitle>
+      <itunes:summary>Après 15 ans de management en Afrique, Alban Vanuxem quitte le tertiaire et entre en apprentissage plomberie à 42 ans. Dans cet épisode fondateur, il décortique les 5 piliers de sa bascule : 1) La valeur à contre-courant, 2) La carte et le territoire (l'IA ne rampera jamais sous votre évier), 3) L'argent dans l'exécution, pas dans le dessin, 4) Penser avec ses mains et la finitude (Matthew Crawford, brasure cuivre et fermeture des boucles), 5) La matière ne flatte personne (le miroir de 6h vs le miroir de fête foraine du bureau).</itunes:summary>
+      <description><![CDATA[Après 15 ans de management en Afrique, Alban Vanuxem quitte le tertiaire et entre en apprentissage plomberie à 42 ans. Dans cet épisode fondateur, il décortique les 5 piliers de sa bascule : 1) La valeur à contre-courant, 2) La carte et le territoire (l'IA ne rampera jamais sous votre évier), 3) L'argent dans l'exécution, pas dans le dessin, 4) Penser avec ses mains et la finitude (Matthew Crawford, brasure cuivre et fermeture des boucles), 5) La matière ne flatte personne (le miroir de 6h vs le miroir de fête foraine du bureau).]]></description>
+      <link>https://albanvanuxem.com#podcast</link>
+      <guid isPermaLink="false">albanvanuxem-podcast-ep01</guid>
+      <pubDate>Sun, 18 Oct 2026 12:00:00 GMT</pubDate>
+      <enclosure url="https://albanvanuxem.com/audio/episode-01-pourquoi-j-ai-quitte-les-bureaux.mp3" length="11655667" type="audio/mpeg" />
+      <itunes:duration>12:08</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+  </channel>
+</rss>
